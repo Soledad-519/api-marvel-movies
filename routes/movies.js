@@ -1,7 +1,7 @@
-const express = require('express');
+var express = require('express');
 const { ValidateCreateMovie, ValidateUpdateMovie } = require('../validators/movieValidator');
 const { getAllMovies, createMovie, getMovieById, updateMovie, deleteOneMovie, findMoviesByFilters } = require('../controllers/movieController');
-const router = express.Router();
+var router = express.Router();
 
 
 /* router.get('/', getAllMovies) // GET movies listing */

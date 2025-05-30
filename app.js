@@ -1,15 +1,10 @@
-const express = require('express');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+var express = require('express');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 const bodyParser = require('body-parser');
 const loggerFile = require('./middlewares/logger');
-const dotenv = requiere('dotenv')
-const morgan = requiere('morgan')
-const cors = required ('cors')
 
-var moviesRouter = require('./routes/movies');4
-
-dotenv
+var moviesRouter = require('./routes/movies');
 
 var app = express();
 
@@ -20,7 +15,6 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(loggerFile);
-app.use(morgan'')
 
 
 app.use('/api/movies', moviesRouter);
